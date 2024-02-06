@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: teal;
+  }
+
+ #ayokoButton {
+  background-color: red;
+}
+
+#sigeButton {
+  background-color: blue;
+}
+
+  
+
+
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+  }
+  
+  .question {
+    margin-bottom: 50px;
+  }
+  
+  .button {
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 2px solid transparent;
+    margin-right: 30px; /* Set initial border width and color */
+  }
+
+  .choices .button:last-child {
+    margin-right: 0; /* Remove margin from last button */
+  }
+
+  
+  .button::before,
+  .button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: transform 0.3s ease;
+  }
+  
+  .button::before {
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  
+  .button::after {
+    background-color: white;
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+  
+  .button:hover::before,
+  .button:hover::after {
+    transform: scaleX(1);
+    transform: scaleY(1);
+  }
+  
+  .button:hover {
+    border: 5px solid transparent; /* Increase border thickness on hover */
+  }
+  
+  
+  
+  #result {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
